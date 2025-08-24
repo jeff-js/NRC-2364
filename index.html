@@ -9,7 +9,7 @@
 
   <!-- 1) Crear producto -->
   <h2>Alta de producto</h2>
-  <form action="#/products/create" method="POST">
+  <form action="#" method="POST">
     <label>Nombre: <input type="text" name="name" required></label><br>
     <label>Precio unitario: <input type="number" name="unit_price" step="0.01" min="0" required></label><br>
     <label>Stock inicial: <input type="number" name="stock" min="0" value="0" required></label><br>
@@ -18,14 +18,14 @@
 
   <!-- 2) Iniciar venta (cabecera) -->
   <h2>Nueva venta</h2>
-  <form action="#/sales/start" method="POST">
+  <form action="#" method="POST">
     <label>Fecha: <input type="date" name="sale_date" required></label>
     <button type="submit">Iniciar venta</button>
   </form>
 
   <!-- 3) Agregar ítem a una venta abierta -->
   <h3>Agregar ítem a venta</h3>
-  <form action="#/sales/add-item" method="POST">
+  <form action="#" method="POST">
     <label>ID venta: <input type="number" name="sale_id" required></label><br>
     <label>Producto:
       <!-- Este select debe ser rellenado por el servidor con los productos -->
@@ -40,14 +40,14 @@
 
   <!-- 4) Cerrar venta (calcula total) -->
   <h3>Cerrar venta</h3>
-  <form action="#/sales/close" method="POST">
+  <form action="#" method="POST">
     <label>ID venta: <input type="number" name="sale_id" required></label>
     <button type="submit">Cerrar venta</button>
   </form>
 
   <!-- 5) Consulta de ventas del día -->
   <h2>Reporte diario</h2>
-  <form action="#/sales/report" method="GET">
+  <form action="#" method="GET">
     <label>Fecha: <input type="date" name="sale_date" required></label>
     <button type="submit">Ver reporte</button>
   </form>
